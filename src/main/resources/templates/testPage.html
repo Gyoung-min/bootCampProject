@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>test</h2>
+<!--<div>총 건수 : <span th:text="${#lists.size(employees)}"></span></div>-->
+
+<div>
+    아이디: <span th:text = "${employeeDto.employeeId}"></span>
+</div>
+
+<div>
+    이름: <span th:text = "${employeeDto.employeeName}"></span>
+</div>
+
+<div>
+    비밀번호: <span th:text = "${employeeDto.employeePassword}"></span>
+</div>
+<div>
+    전화번호: <span th:text = "${employeeDto.employeeTel}"></span>
+</div>
+<div>
+    장소: <span th:text = "${employeeDto.storeLocation}"></span>
+</div>
+<div>
+    매장명: <span th:text = "${employeeDto.storeName}"></span>
+</div>
+<div>
+    오픈일자: <span th:text = "${employeeDto.open_date}"></span>
+</div>
+
+</body>
+</html>
