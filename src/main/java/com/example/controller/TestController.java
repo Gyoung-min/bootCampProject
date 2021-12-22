@@ -27,13 +27,20 @@ public class TestController {
         /*List<Employee> employees = employeeRepository.findAll();
         model.addAttribute("employees", employees);*/
 
-        EmployeeDto employeeDto = new EmployeeDto();
-        employeeDto.setEmployeeId("rudals0326");
-        employeeDto.setEmployeeTel("010-9159-6922");
-        employeeDto.setEmployeePassword("rudals12@!");
-        //employeeDto.setOpen_date(LocalDateTime.MAX);
-        employeeDto.setEmployeeName("노경민");
-        model.addAttribute("employeeDto", employeeDto);
+        //EmployeeDto employeeDto = new EmployeeDto();
+        List<EmployeeDto> employeeDtoList = new ArrayList<>();
+
+        for (int i = 0; i<=10; i++) {
+            EmployeeDto employeeDto = new EmployeeDto();
+            employeeDto.setEmployeeId("rudals0326");
+            employeeDto.setEmployeeTel("010-9159-6922");
+            employeeDto.setEmployeePassword("rudals12@!");
+            //employeeDto.setOpen_date(LocalDateTime.MAX);
+            employeeDto.setEmployeeName("노경민");
+            employeeDtoList.add(employeeDto);
+
+        }
+        model.addAttribute("employeeDtoList", employeeDtoList);
 
         return "testPage";
     }
